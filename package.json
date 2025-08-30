@@ -1,0 +1,47 @@
+{
+  "name": "prompt-enhancer-pro",
+  "version": "1.0.0",
+  "description": "A powerful browser extension that transforms simple prompts into professional, detailed AI instructions for better chatbot and AI tool results.",
+  "main": "manifest.json",
+  "scripts": {
+    "build": "echo 'Extension is ready to use - no build step required'",
+    "test": "echo 'No tests specified'",
+    "lint": "echo 'No linting configured'",
+    "package": "zip -r prompt-enhancer-pro.zip . -x '*.git*' '*.DS_Store' '*.zip' 'node_modules/*' '*.md' 'package.json' 'package-lock.json'"
+  },
+  "keywords": [
+    "browser-extension",
+    "chrome-extension",
+    "firefox-addon",
+    "prompt-engineering",
+    "ai-tools",
+    "chatbot",
+    "productivity",
+    "ai-assistant"
+  ],
+  "author": "Prompt Enhancer Pro Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/prompt-enhancer-pro.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/prompt-enhancer-pro/issues"
+  },
+  "homepage": "https://github.com/yourusername/prompt-enhancer-pro#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {},
+  "dependencies": {},
+  "manifest": {
+    "version": 3,
+    "name": "Prompt Enhancer Pro",
+    "description": "Transform simple prompts into powerful AI instructions",
+    "permissions": [
+      "activeTab",
+      "storage",
+      "contextMenus"
+    ]
+  }
+}

@@ -1,0 +1,269 @@
+/* Content Script Styles for Prompt Enhancer Pro */
+
+/* Context Menu Styles */
+#prompt-enhancer-context-menu {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border: 1px solid #e1e5e9;
+    overflow: hidden;
+    min-width: 200px;
+    animation: contextMenuSlideIn 0.2s ease;
+}
+
+@keyframes contextMenuSlideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.context-menu-item {
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.context-menu-item:last-child {
+    border-bottom: none;
+}
+
+.context-menu-item:hover {
+    background-color: #f8f9ff;
+    color: #667eea;
+}
+
+/* Floating Input Styles */
+#prompt-enhancer-floating-input {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.floating-input-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 10px 10px 0 0;
+    font-weight: 600;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+
+.close-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.floating-input-textarea {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    resize: none;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.5;
+    background: #f8f9fa;
+    color: #333;
+    min-height: 120px;
+    box-sizing: border-box;
+}
+
+.floating-input-textarea:focus {
+    outline: none;
+    background: white;
+}
+
+.floating-input-actions {
+    display: flex;
+    gap: 8px;
+    padding: 16px 20px;
+    background: #f8f9fa;
+    border-radius: 0 0 10px 10px;
+}
+
+.floating-input-actions button {
+    flex: 1;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.copy-btn {
+    background: #667eea;
+    color: white;
+}
+
+.copy-btn:hover {
+    background: #5a6fd8;
+}
+
+.close-float-btn {
+    background: #6c757d;
+    color: white;
+}
+
+.close-float-btn:hover {
+    background: #5a6268;
+}
+
+/* Floating Toolbar Styles */
+#prompt-enhancer-toolbar {
+    animation: toolbarSlideIn 0.3s ease;
+}
+
+@keyframes toolbarSlideIn {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Notification Styles */
+.prompt-enhancer-notification {
+    animation: notificationSlideIn 0.3s ease;
+}
+
+@keyframes notificationSlideIn {
+    from {
+        transform: translateX(-50%) translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    #prompt-enhancer-context-menu {
+        min-width: 180px;
+        font-size: 13px;
+    }
+    
+    .context-menu-item {
+        padding: 10px 14px;
+    }
+    
+    #prompt-enhancer-floating-input {
+        width: calc(100vw - 40px);
+        right: 20px;
+        left: 20px;
+    }
+    
+    #prompt-enhancer-toolbar {
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    .toolbar-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    #prompt-enhancer-context-menu {
+        background: #2d3748;
+        border-color: #4a5568;
+        color: #e2e8f0;
+    }
+    
+    .context-menu-item {
+        color: #e2e8f0;
+        border-bottom-color: #4a5568;
+    }
+    
+    .context-menu-item:hover {
+        background-color: #4a5568;
+        color: #667eea;
+    }
+    
+    #prompt-enhancer-floating-input {
+        background: #2d3748;
+        border-color: #667eea;
+    }
+    
+    .floating-input-textarea {
+        background: #4a5568;
+        color: #e2e8f0;
+    }
+    
+    .floating-input-textarea:focus {
+        background: #2d3748;
+    }
+    
+    .floating-input-actions {
+        background: #4a5568;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    #prompt-enhancer-context-menu {
+        border-width: 2px;
+        border-color: #000;
+    }
+    
+    .context-menu-item {
+        border-bottom-width: 2px;
+        border-bottom-color: #000;
+    }
+    
+    #prompt-enhancer-floating-input {
+        border-width: 3px;
+    }
+    
+    .floating-input-textarea {
+        border: 2px solid #000;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    #prompt-enhancer-context-menu,
+    #prompt-enhancer-toolbar,
+    .prompt-enhancer-notification {
+        animation: none;
+    }
+    
+    .context-menu-item,
+    .close-btn,
+    .floating-input-actions button,
+    .toolbar-btn {
+        transition: none;
+    }
+}

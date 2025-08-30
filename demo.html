@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Enhancer Pro - Demo Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            opacity: 0.9;
+            font-size: 16px;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .demo-section {
+            margin-bottom: 30px;
+        }
+
+        .demo-section h2 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .demo-section p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .chat-interface {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .chat-messages {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            min-height: 200px;
+            border: 1px solid #e1e5e9;
+        }
+
+        .chat-input-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .chat-input {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 14px;
+            resize: vertical;
+            min-height: 60px;
+        }
+
+        .chat-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .send-btn {
+            padding: 12px 24px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .send-btn:hover {
+            background: #5a6fd8;
+        }
+
+        .test-text {
+            background: #e8f4fd;
+            border: 1px solid #bee5eb;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .test-text h3 {
+            color: #0c5460;
+            margin-bottom: 10px;
+        }
+
+        .test-text p {
+            color: #0c5460;
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .instructions {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .instructions h3 {
+            color: #0c5460;
+            margin-bottom: 10px;
+        }
+
+        .instructions ul {
+            color: #0c5460;
+            margin-left: 20px;
+        }
+
+        .instructions li {
+            margin-bottom: 5px;
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #e1e5e9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 Prompt Enhancer Pro Demo</h1>
+            <p>Test the extension functionality on this page</p>
+        </div>
+
+        <div class="content">
+            <div class="demo-section">
+                <h2>🎯 How to Test</h2>
+                <p>This demo page allows you to test all the features of Prompt Enhancer Pro. Make sure you have the extension installed and enabled.</p>
+            </div>
+
+            <div class="instructions">
+                <h3>📋 Testing Instructions</h3>
+                <ul>
+                    <li><strong>Extension Popup:</strong> Click the 🚀 icon in your browser toolbar</li>
+                    <li><strong>Context Menu:</strong> Select any text below and right-click</li>
+                    <li><strong>Floating Toolbar:</strong> Look for the floating 🚀 button</li>
+                    <li><strong>Chat Interface:</strong> Test prompt insertion in the chat input below</li>
+                </ul>
+            </div>
+
+            <div class="test-text">
+                <h3>🧪 Test Text for Enhancement</h3>
+                <p>Try selecting and enhancing these prompts:</p>
+                <p><span class="highlight">help me write a blog post about artificial intelligence</span></p>
+                <p><span class="highlight">create a business plan for a startup</span></p>
+                <p><span class="highlight">explain quantum computing in simple terms</span></p>
+                <p><span class="highlight">write a professional email to a client</span></p>
+            </div>
+
+            <div class="chat-interface">
+                <h3>💬 AI Chat Interface Demo</h3>
+                <p>This simulates an AI chat interface where you can test prompt insertion:</p>
+                
+                <div class="chat-messages">
+                    <p><strong>AI Assistant:</strong> Hello! I'm here to help. How can I assist you today?</p>
+                </div>
+
+                <div class="chat-input-container">
+                    <textarea 
+                        class="chat-input" 
+                        placeholder="Type your message here or use the extension to enhance and insert a prompt..."
+                    ></textarea>
+                    <button class="send-btn">Send</button>
+                </div>
+            </div>
+
+            <div class="demo-section">
+                <h2>🎨 Enhancement Styles to Try</h2>
+                <p>Test different enhancement styles in the extension popup:</p>
+                <ul style="margin-left: 20px; color: #666;">
+                    <li><strong>Professional:</strong> Formal, structured responses</li>
+                    <li><strong>Creative:</strong> Innovative, imaginative approaches</li>
+                    <li><strong>Detailed:</strong> Comprehensive, thorough explanations</li>
+                    <li><strong>Concise:</strong> Clear, focused responses</li>
+                </ul>
+            </div>
+
+            <div class="demo-section">
+                <h2>⚡ Quick Enhancement</h2>
+                <p>Select any text on this page, right-click, and choose:</p>
+                <ul style="margin-left: 20px; color: #666;">
+                    <li><strong>🚀 Enhance as Prompt:</strong> Opens the full enhancer</li>
+                    <li><strong>⚡ Quick Enhance:</strong> Instant enhancement</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>💡 <strong>Pro Tip:</strong> Use Ctrl+Shift+E to quickly open the enhancer from anywhere!</p>
+        </div>
+    </div>
+
+    <script>
+        // Simple demo functionality
+        document.querySelector('.send-btn').addEventListener('click', function() {
+            const input = document.querySelector('.chat-input');
+            const message = input.value.trim();
+            
+            if (message) {
+                const chatMessages = document.querySelector('.chat-messages');
+                const userMessage = document.createElement('p');
+                userMessage.innerHTML = `<strong>You:</strong> ${message}`;
+                chatMessages.appendChild(userMessage);
+                
+                // Simulate AI response
+                setTimeout(() => {
+                    const aiResponse = document.createElement('p');
+                    aiResponse.innerHTML = `<strong>AI Assistant:</strong> I understand you're asking about: "${message}". This is a great example of how the Prompt Enhancer Pro can help you craft better prompts for more effective AI interactions!`;
+                    chatMessages.appendChild(aiResponse);
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }, 1000);
+                
+                input.value = '';
+            }
+        });
+
+        // Enter key support
+        document.querySelector('.chat-input').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                document.querySelector('.send-btn').click();
+            }
+        });
+    </script>
+</body>
+</html>
