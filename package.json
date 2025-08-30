@@ -1,0 +1,41 @@
+{
+  "name": "prompt-enhancer-pro",
+  "version": "1.0.0",
+  "description": "A powerful Chrome extension that transforms simple language into effective prompts for AI chatbots and tools",
+  "main": "popup.js",
+  "scripts": {
+    "build": "echo 'Extension built successfully!'",
+    "dev": "echo 'Development mode - load extension in Chrome with developer mode enabled'",
+    "test": "echo 'No tests configured yet'",
+    "lint": "echo 'No linter configured yet'"
+  },
+  "keywords": [
+    "chrome-extension",
+    "ai",
+    "prompt-engineering",
+    "chatgpt",
+    "claude",
+    "bard",
+    "ai-tools",
+    "productivity",
+    "browser-extension"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/prompt-enhancer-pro.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/prompt-enhancer-pro/issues"
+  },
+  "homepage": "https://github.com/your-username/prompt-enhancer-pro#readme",
+  "devDependencies": {},
+  "dependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "Chrome >= 88"
+  ]
+}

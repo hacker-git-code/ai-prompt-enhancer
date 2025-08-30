@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Enhancer Pro</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">🚀 Prompt Enhancer Pro</h1>
+            <p class="subtitle">Transform simple language into powerful AI prompts</p>
+        </header>
+
+        <div class="input-section">
+            <label for="original-prompt" class="label">Your Simple Prompt:</label>
+            <textarea 
+                id="original-prompt" 
+                class="input-field" 
+                placeholder="Write your simple prompt here...&#10;Example: 'help me write a blog post about cooking'"
+                rows="4"
+            ></textarea>
+        </div>
+
+        <div class="options-section">
+            <label class="label">Enhancement Style:</label>
+            <div class="style-buttons">
+                <button class="style-btn active" data-style="professional">Professional</button>
+                <button class="style-btn" data-style="creative">Creative</button>
+                <button class="style-btn" data-style="detailed">Detailed</button>
+                <button class="style-btn" data-style="concise">Concise</button>
+            </div>
+        </div>
+
+        <div class="action-section">
+            <button id="enhance-btn" class="enhance-btn">
+                <span class="btn-text">✨ Enhance Prompt</span>
+                <span class="loading-spinner" style="display: none;">⏳</span>
+            </button>
+        </div>
+
+        <div class="result-section" style="display: none;">
+            <label class="label">Enhanced Prompt:</label>
+            <div class="result-container">
+                <textarea id="enhanced-prompt" class="result-field" readonly rows="6"></textarea>
+                <div class="result-actions">
+                    <button id="copy-btn" class="action-btn">📋 Copy</button>
+                    <button id="use-btn" class="action-btn">💬 Use in Chat</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="tips-section">
+            <h3 class="tips-title">💡 Tips for Better Prompts:</h3>
+            <ul class="tips-list">
+                <li>Be specific about what you want</li>
+                <li>Include context and examples</li>
+                <li>Specify the desired format or style</li>
+                <li>Mention your target audience</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
