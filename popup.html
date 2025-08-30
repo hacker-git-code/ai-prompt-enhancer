@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Enhancer Pro</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">🚀 Prompt Enhancer Pro</h1>
+            <p class="subtitle">Transform simple prompts into powerful AI instructions</p>
+        </header>
+
+        <div class="input-section">
+            <label for="prompt-input" class="input-label">Your Simple Prompt:</label>
+            <textarea 
+                id="prompt-input" 
+                class="prompt-input" 
+                placeholder="Enter your simple prompt here...&#10;Example: 'help me write a blog post'"
+                rows="4"
+            ></textarea>
+        </div>
+
+        <div class="enhancement-options">
+            <label class="option-label">Enhancement Style:</label>
+            <div class="style-buttons">
+                <button class="style-btn active" data-style="professional">Professional</button>
+                <button class="style-btn" data-style="creative">Creative</button>
+                <button class="style-btn" data-style="detailed">Detailed</button>
+                <button class="style-btn" data-style="concise">Concise</button>
+            </div>
+        </div>
+
+        <div class="enhancement-options">
+            <label class="option-label">Additional Context:</label>
+            <div class="context-options">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="add-examples" checked>
+                    <span class="checkmark"></span>
+                    Include examples
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="add-formatting" checked>
+                    <span class="checkmark"></span>
+                    Add formatting instructions
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="add-constraints">
+                    <span class="checkmark"></span>
+                    Specify constraints
+                </label>
+            </div>
+        </div>
+
+        <button id="enhance-btn" class="enhance-btn">
+            <span class="btn-text">✨ Enhance Prompt</span>
+            <div class="loading-spinner hidden"></div>
+        </button>
+
+        <div class="result-section hidden" id="result-section">
+            <label class="result-label">Enhanced Prompt:</label>
+            <div class="enhanced-prompt-container">
+                <textarea 
+                    id="enhanced-prompt" 
+                    class="enhanced-prompt" 
+                    readonly
+                    rows="6"
+                ></textarea>
+                <div class="prompt-actions">
+                    <button id="copy-btn" class="action-btn copy-btn">
+                        📋 Copy
+                    </button>
+                    <button id="use-btn" class="action-btn use-btn">
+                        🚀 Use This Prompt
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="quick-templates">
+            <h3 class="templates-title">Quick Templates</h3>
+            <div class="template-buttons">
+                <button class="template-btn" data-template="blog">📝 Blog Post</button>
+                <button class="template-btn" data-template="email">📧 Email</button>
+                <button class="template-btn" data-template="code">💻 Code</button>
+                <button class="template-btn" data-template="analysis">📊 Analysis</button>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>💡 Tip: Right-click on any text to enhance it instantly!</p>
+        </footer>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
