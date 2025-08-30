@@ -1,31 +1,32 @@
-/* Content Script Styles for Prompt Enhancer Pro */
+/* Simplified Content Script Styles for Prompt Enhancer Pro */
 
-.prompt-enhancer-float-btn {
+.prompt-enhancer-btn {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
+    font-size: 20px;
     cursor: pointer;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     z-index: 10000;
     transition: all 0.3s ease;
     user-select: none;
+    color: white;
     animation: floatIn 0.5s ease-out;
 }
 
-.prompt-enhancer-float-btn:hover {
+.prompt-enhancer-btn:hover {
     transform: scale(1.1);
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-.prompt-enhancer-float-btn:active {
+.prompt-enhancer-btn:active {
     transform: scale(0.95);
 }
 
@@ -45,18 +46,17 @@
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
-    cursor: pointer;
-    font-size: 16px;
-    opacity: 0.7;
-    transition: opacity 0.2s ease;
+    font-size: 14px;
+    opacity: 0.6;
     z-index: 1000;
     pointer-events: none;
+    color: #667eea;
     animation: indicatorPulse 2s ease-in-out infinite;
 }
 
 @keyframes indicatorPulse {
     0%, 100% {
-        opacity: 0.7;
+        opacity: 0.6;
         transform: translateY(-50%) scale(1);
     }
     50% {
@@ -65,176 +65,50 @@
     }
 }
 
-.prompt-enhancer-popup {
+.prompt-enhancer-notification {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    top: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
     z-index: 10001;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    animation: popupSlideIn 0.3s ease-out;
-}
-
-@keyframes popupSlideIn {
-    from {
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
-    }
-}
-
-.prompt-enhancer-popup .popup-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 20px;
-    border-radius: 16px 16px 0 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.prompt-enhancer-popup .popup-header h3 {
-    margin: 0;
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.prompt-enhancer-popup .close-btn {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 0;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: background 0.2s ease;
-}
-
-.prompt-enhancer-popup .close-btn:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.prompt-enhancer-popup .popup-content {
-    padding: 20px;
-}
-
-.prompt-enhancer-popup .quick-input {
-    width: 100%;
-    padding: 12px;
-    border: 2px solid #e1e5e9;
-    border-radius: 8px;
-    font-family: inherit;
     font-size: 14px;
-    resize: vertical;
-    margin-bottom: 16px;
-    min-height: 80px;
-    transition: border-color 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: slideIn 0.3s ease;
 }
 
-.prompt-enhancer-popup .quick-input:focus {
-    outline: none;
-    border-color: #667eea;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-}
-
-.prompt-enhancer-popup .style-buttons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    margin-bottom: 16px;
-}
-
-.prompt-enhancer-popup .style-btn {
-    padding: 8px 12px;
-    border: 2px solid #e1e5e9;
-    border-radius: 6px;
-    background: white;
-    color: #666;
-    font-size: 12px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    font-weight: 500;
-}
-
-.prompt-enhancer-popup .style-btn:hover {
-    border-color: #667eea;
-    color: #667eea;
-}
-
-.prompt-enhancer-popup .style-btn.active {
-    background: #667eea;
-    border-color: #667eea;
-    color: white;
-    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
-}
-
-.prompt-enhancer-popup .enhance-btn {
-    width: 100%;
-    padding: 12px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.prompt-enhancer-popup .enhance-btn:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-}
-
-.prompt-enhancer-popup .enhance-btn:active {
-    transform: translateY(0);
+@keyframes slideIn {
+    from { 
+        transform: translateX(100%); 
+        opacity: 0; 
+    }
+    to { 
+        transform: translateX(0); 
+        opacity: 1; 
+    }
 }
 
 /* Responsive adjustments */
-@media (max-width: 450px) {
-    .prompt-enhancer-popup {
-        width: 90vw;
-        max-width: 400px;
-    }
-    
-    .prompt-enhancer-popup .style-buttons {
-        grid-template-columns: 1fr;
+@media (max-width: 768px) {
+    .prompt-enhancer-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+        bottom: 15px;
+        right: 15px;
     }
 }
 
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
-    .prompt-enhancer-popup {
-        background: #1a1a1a;
-        color: #ffffff;
+    .prompt-enhancer-btn {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     }
     
-    .prompt-enhancer-popup .quick-input {
-        background: #2a2a2a;
-        border-color: #404040;
-        color: #ffffff;
-    }
-    
-    .prompt-enhancer-popup .style-btn {
-        background: #2a2a2a;
-        border-color: #404040;
-        color: #cccccc;
-    }
-    
-    .prompt-enhancer-popup .style-btn:hover {
-        border-color: #667eea;
-        color: #667eea;
+    .prompt-enhancer-btn:hover {
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
     }
 }

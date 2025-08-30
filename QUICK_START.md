@@ -1,6 +1,6 @@
 # 🚀 Quick Start Guide
 
-## ⚡ Get Running in 2 Minutes
+## ⚡ Get Running in 1 Minute
 
 ### 1. Install Extension
 1. Open Chrome and go to `chrome://extensions/`
@@ -9,32 +9,30 @@
 4. Select this folder
 5. Pin the extension to your toolbar
 
-### 2. Test It Out
-1. Click the 🚀 extension icon
-2. Type: "help me write a blog post"
-3. Choose "Professional" style
-4. Click "✨ Enhance Prompt"
-5. Copy the enhanced prompt
+### 2. Use It - Super Simple!
+1. **Go to any AI chat tool** (ChatGPT, Claude, Bard, etc.)
+2. **Type your prompt** in the chat box
+3. **Click the floating 🚀 button** (appears on every webpage)
+4. **Your prompt is instantly enhanced!** ✨
 
-### 3. Use in AI Tools
-- Go to ChatGPT, Claude, or any AI platform
-- Paste your enhanced prompt
-- Get better results! 🎯
+### 3. Change Style (Optional)
+1. Click the extension icon in your toolbar
+2. Choose: Professional, Creative, Detailed, or Concise
+3. Your choice is automatically saved
 
-## 🌟 Key Features
+## 🌟 What Happens
 
-- **4 Enhancement Styles**: Professional, Creative, Detailed, Concise
-- **Smart Detection**: Automatically enhances writing, coding, analysis prompts
-- **Direct Integration**: Works with ChatGPT, Claude, Bard, and more
-- **Floating Button**: Quick access on any webpage
-- **Beautiful UI**: Modern, responsive design
+- **Floating Button**: 🚀 appears on every webpage
+- **Auto-Detection**: Finds chat inputs automatically
+- **Instant Enhancement**: Replaces your text with enhanced version
+- **No Copy-Paste**: Everything happens automatically
 
 ## 🔧 Troubleshooting
 
-- **Extension not working?** Refresh the page and try again
-- **Chat not detected?** Make sure you're on a supported AI platform
+- **Button not working?** Refresh the page
+- **Chat not detected?** Look for ✨ indicators near inputs
 - **Need help?** Check the full [README.md](README.md)
 
 ---
 
-**Happy Prompting! 🚀✨**
+**That's it! Start getting better AI results today! 🚀✨**

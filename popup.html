@@ -4,62 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prompt Enhancer Pro</title>
-    <link rel="stylesheet" href="popup.css">
+    <style>
+        body {
+            width: 200px;
+            padding: 16px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        
+        .title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin: 0 0 4px 0;
+        }
+        
+        .subtitle {
+            font-size: 12px;
+            color: #666;
+            margin: 0;
+        }
+        
+        .style-section {
+            margin-bottom: 16px;
+        }
+        
+        .style-label {
+            font-size: 12px;
+            font-weight: 500;
+            color: #555;
+            margin-bottom: 8px;
+            display: block;
+        }
+        
+        .style-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px;
+        }
+        
+        .style-btn {
+            padding: 6px 8px;
+            border: 1px solid #e1e5e9;
+            border-radius: 4px;
+            background: white;
+            color: #666;
+            font-size: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-weight: 500;
+        }
+        
+        .style-btn:hover {
+            border-color: #667eea;
+            color: #667eea;
+        }
+        
+        .style-btn.active {
+            background: #667eea;
+            border-color: #667eea;
+            color: white;
+        }
+        
+        .info {
+            font-size: 11px;
+            color: #888;
+            text-align: center;
+            line-height: 1.4;
+            margin-top: 12px;
+            padding: 8px;
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <h1 class="title">🚀 Prompt Enhancer Pro</h1>
-            <p class="subtitle">Transform simple language into powerful AI prompts</p>
-        </header>
+    <div class="header">
+        <h1 class="title">🚀 Prompt Enhancer</h1>
+        <p class="subtitle">Click the floating button to enhance prompts</p>
+    </div>
 
-        <div class="input-section">
-            <label for="original-prompt" class="label">Your Simple Prompt:</label>
-            <textarea 
-                id="original-prompt" 
-                class="input-field" 
-                placeholder="Write your simple prompt here...&#10;Example: 'help me write a blog post about cooking'"
-                rows="4"
-            ></textarea>
+    <div class="style-section">
+        <label class="style-label">Enhancement Style:</label>
+        <div class="style-buttons">
+            <button class="style-btn active" data-style="professional">Professional</button>
+            <button class="style-btn" data-style="creative">Creative</button>
+            <button class="style-btn" data-style="detailed">Detailed</button>
+            <button class="style-btn" data-style="concise">Concise</button>
         </div>
+    </div>
 
-        <div class="options-section">
-            <label class="label">Enhancement Style:</label>
-            <div class="style-buttons">
-                <button class="style-btn active" data-style="professional">Professional</button>
-                <button class="style-btn" data-style="creative">Creative</button>
-                <button class="style-btn" data-style="detailed">Detailed</button>
-                <button class="style-btn" data-style="concise">Concise</button>
-            </div>
-        </div>
-
-        <div class="action-section">
-            <button id="enhance-btn" class="enhance-btn">
-                <span class="btn-text">✨ Enhance Prompt</span>
-                <span class="loading-spinner" style="display: none;">⏳</span>
-            </button>
-        </div>
-
-        <div class="result-section" style="display: none;">
-            <label class="label">Enhanced Prompt:</label>
-            <div class="result-container">
-                <textarea id="enhanced-prompt" class="result-field" readonly rows="6"></textarea>
-                <div class="result-actions">
-                    <button id="copy-btn" class="action-btn">📋 Copy</button>
-                    <button id="use-btn" class="action-btn">💬 Use in Chat</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="tips-section">
-            <h3 class="tips-title">💡 Tips for Better Prompts:</h3>
-            <ul class="tips-list">
-                <li>Be specific about what you want</li>
-                <li>Include context and examples</li>
-                <li>Specify the desired format or style</li>
-                <li>Mention your target audience</li>
-            </ul>
-        </div>
+    <div class="info">
+        <strong>How to use:</strong><br>
+        1. Type your prompt in any chat box<br>
+        2. Click the 🚀 floating button<br>
+        3. Your prompt will be automatically enhanced!
     </div>
 
     <script src="popup.js"></script>
