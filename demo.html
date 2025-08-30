@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Enhancer Pro - Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .subtitle {
+            font-size: 20px;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #333;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .example-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .example-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 24px;
+            border: 1px solid #e9ecef;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .example-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .example-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #667eea;
+        }
+
+        .prompt-box {
+            background: white;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 16px;
+            font-style: italic;
+            color: #666;
+        }
+
+        .enhanced-box {
+            background: #e8f4fd;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            padding: 16px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+        }
+
+        .features-list li:before {
+            content: "✨";
+            margin-right: 12px;
+            font-size: 20px;
+        }
+
+        .cta-section {
+            text-align: center;
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 12px;
+            margin-top: 40px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            margin: 20px 10px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .platforms {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .platform-tag {
+            background: #667eea;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .example-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .title {
+                font-size: 36px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">🚀 Prompt Enhancer Pro</h1>
+            <p class="subtitle">Transform simple language into powerful AI prompts</p>
+        </header>
+
+        <div class="content">
+            <section class="section">
+                <h2 class="section-title">🎯 What It Does</h2>
+                <p style="font-size: 18px; line-height: 1.6; margin-bottom: 20px;">
+                    Prompt Enhancer Pro is a Chrome extension that automatically transforms your simple prompts into 
+                    professional, detailed, creative, or concise versions that get better results from AI tools.
+                </p>
+                
+                <ul class="features-list">
+                    <li>Automatically detects and enhances prompts for writing, coding, analysis, and creative tasks</li>
+                    <li>Provides 4 enhancement styles: Professional, Creative, Detailed, and Concise</li>
+                    <li>Directly integrates with ChatGPT, Claude, Bard, and other AI platforms</li>
+                    <li>Beautiful floating button for quick access on any webpage</li>
+                    <li>Context-aware suggestions based on your prompt content</li>
+                    <li>One-click insertion into chat interfaces</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">🎨 Enhancement Examples</h2>
+                
+                <div class="example-grid">
+                    <div class="example-card">
+                        <h3 class="example-title">📝 Writing Prompt</h3>
+                        <div class="prompt-box">
+                            "help me write a blog post about cooking"
+                        </div>
+                        <div class="enhanced-box">
+                            <strong>Enhanced (Professional):</strong><br>
+                            Please provide a comprehensive and professional response to the following request: help me write a blog post about cooking. Please ensure the response is well-structured, informative, and suitable for a professional audience. Consider the target audience, tone, and purpose. Include a clear structure with introduction, main points, and conclusion. Include relevant examples, best practices, and actionable insights.
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <h3 class="example-title">💻 Coding Prompt</h3>
+                        <div class="prompt-box">
+                            "write a function to sort an array"
+                        </div>
+                        <div class="enhanced-box">
+                            <strong>Enhanced (Detailed):</strong><br>
+                            I need a thorough and detailed analysis of the following: write a function to sort an array. Please provide an in-depth response with comprehensive coverage, step-by-step explanations, and thorough analysis. Provide clear code examples, explain the logic, and consider edge cases and error handling. Include multiple perspectives, detailed examples, and comprehensive coverage of all aspects.
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <h3 class="example-title">🎨 Creative Prompt</h3>
+                        <div class="prompt-box">
+                            "design a logo for my coffee shop"
+                        </div>
+                        <div class="enhanced-box">
+                            <strong>Enhanced (Creative):</strong><br>
+                            I'd love to see your creative take on this: design a logo for my coffee shop. Feel free to think outside the box and provide innovative, engaging, and imaginative solutions. Encourage innovative thinking and provide multiple creative approaches or solutions. Add creative examples, metaphors, or unique perspectives to make it memorable.
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <h3 class="example-title">🔍 Analysis Prompt</h3>
+                        <div class="prompt-box">
+                            "analyze the benefits of remote work"
+                        </div>
+                        <div class="enhanced-box">
+                            <strong>Enhanced (Professional):</strong><br>
+                            Please provide a comprehensive and professional response to the following request: analyze the benefits of remote work. Please ensure the response is well-structured, informative, and suitable for a professional audience. Present multiple perspectives, cite relevant sources if applicable, and provide evidence-based conclusions. Include relevant examples, best practices, and actionable insights.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">🔧 Supported Platforms</h2>
+                <p style="font-size: 18px; margin-bottom: 20px;">
+                    The extension automatically detects and works with these AI platforms:
+                </p>
+                
+                <div class="platforms">
+                    <span class="platform-tag">ChatGPT</span>
+                    <span class="platform-tag">Claude</span>
+                    <span class="platform-tag">Google Bard</span>
+                    <span class="platform-tag">Bing Chat</span>
+                    <span class="platform-tag">Poe</span>
+                    <span class="platform-tag">Perplexity</span>
+                    <span class="platform-tag">You.com</span>
+                    <span class="platform-tag">Phind</span>
+                </div>
+            </section>
+
+            <section class="cta-section">
+                <h2 style="font-size: 32px; margin-bottom: 20px; color: #333;">
+                    Ready to Transform Your Prompts?
+                </h2>
+                <p style="font-size: 18px; margin-bottom: 30px; color: #666;">
+                    Install Prompt Enhancer Pro and start getting better results from AI tools today!
+                </p>
+                
+                <a href="INSTALL.md" class="cta-button">📥 Install Now</a>
+                <a href="README.md" class="cta-button">📚 Learn More</a>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
