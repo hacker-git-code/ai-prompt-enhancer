@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prompt Enhancer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header class="popup-header">
+      <div class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+        <h1>Prompt Enhancer</h1>
+      </div>
+      <p class="subtitle">Transform your prompts into powerful AI interactions</p>
+    </header>
+
+    <main class="popup-content">
+      <section class="setting-group">
+        <div class="setting-item">
+          <div class="setting-label">
+            <span>Enable Enhancement</span>
+            <span class="setting-description">Automatically detect and enhance prompts</span>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox" id="enableToggle" checked>
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+      </section>
+
+      <section class="setting-group">
+        <h3>Enhancement Style</h3>
+        <div class="style-selector">
+          <label class="style-option">
+            <input type="radio" name="style" value="Professional" checked>
+            <div class="style-card">
+              <div class="style-icon">💼</div>
+              <div class="style-info">
+                <span class="style-name">Professional</span>
+                <span class="style-desc">Formal, structured, business-like</span>
+              </div>
+            </div>
+          </label>
+
+          <label class="style-option">
+            <input type="radio" name="style" value="Creative">
+            <div class="style-card">
+              <div class="style-icon">🎨</div>
+              <div class="style-info">
+                <span class="style-name">Creative</span>
+                <span class="style-desc">Imaginative, inspiring, artistic</span>
+              </div>
+            </div>
+          </label>
+
+          <label class="style-option">
+            <input type="radio" name="style" value="Technical">
+            <div class="style-card">
+              <div class="style-icon">⚙️</div>
+              <div class="style-info">
+                <span class="style-name">Technical</span>
+                <span class="style-desc">Detailed, precise, code-focused</span>
+              </div>
+            </div>
+          </label>
+
+          <label class="style-option">
+            <input type="radio" name="style" value="Casual">
+            <div class="style-card">
+              <div class="style-icon">😊</div>
+              <div class="style-info">
+                <span class="style-name">Casual</span>
+                <span class="style-desc">Friendly, conversational, relaxed</span>
+              </div>
+            </div>
+          </label>
+        </div>
+      </section>
+
+      <section class="setting-group">
+        <h3>How It Works</h3>
+        <div class="info-cards">
+          <div class="info-card">
+            <div class="info-number">1</div>
+            <p>Type your prompt in any AI chat interface</p>
+          </div>
+          <div class="info-card">
+            <div class="info-number">2</div>
+            <p>Click the "Enhance" button that appears</p>
+          </div>
+          <div class="info-card">
+            <div class="info-number">3</div>
+            <p>Your prompt is automatically refined and ready to send</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="popup-footer">
+      <div class="status-indicator">
+        <span class="status-dot active"></span>
+        <span class="status-text">Active</span>
+      </div>
+      <button id="resetSettings" class="reset-button">Reset to Defaults</button>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
